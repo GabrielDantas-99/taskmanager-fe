@@ -1,0 +1,20 @@
+.container {
+    height: 83%;
+}
+
+i {
+    padding-right: .6rem;
+}
+
+a span {
+    align-items: center;
+}
+.mat-list-base .mat-list-item .mat-list-item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center!important;
+    box-sizing: border-box;
+    padding: 0 16px;
+    position: relative;
+    height: inherit;
+}
