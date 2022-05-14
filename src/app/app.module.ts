@@ -13,7 +13,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './components/views/home/home.component';
-
+import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -23,7 +24,8 @@ import { HomeComponent } from './components/views/home/home.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    ResponsavelReadComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { HomeComponent } from './components/views/home/home.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
