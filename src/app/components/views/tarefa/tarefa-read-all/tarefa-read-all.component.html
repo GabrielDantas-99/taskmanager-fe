@@ -8,7 +8,7 @@
     </button>
   
     <div class="mat-elevation-z8 content-table">
-      <table class="table" mat-table>
+      <table class="table" mat-table [dataSource]="tarefas">
         <!-- Coluna Id -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -22,7 +22,7 @@
         </ng-container>
   
         <ng-container matColumnDef="tarefas">
-          <th mat-header-cell *matHeaderCellDef> Ver Tarefas </th>
+          <th mat-header-cell *matHeaderCellDef> Ver Tarefa </th>
           <td mat-cell *matCellDef="let row">
             <a class="tarefas">
               <i class="material-icons"> checklist_rtl </i>
