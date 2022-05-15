@@ -9,6 +9,7 @@ i {
 a span {
     align-items: center;
 }
+
 .mat-list-base .mat-list-item .mat-list-item-content {
     display: flex;
     flex-direction: row;

@@ -3,16 +3,16 @@
 
     <mat-form-field class="form">
         <mat-label>Nome</mat-label>
-        <input matInput type="text" name="nome" placeholder="Ex. Gabriel">
+        <input matInput [(ngModel)]="responsavel.nome" type="text" name="nome" placeholder="Ex. Gabriel">
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Descrição</mat-label>
-        <input matInput type="text" name="descricao" placeholder="Ex. Full-Stack">
+        <input matInput [(ngModel)]="responsavel.descricao" type="text" name="descricao" placeholder="Ex. Full-Stack">
     </mat-form-field>
 
     <div class="buttons">
-        <button class="bt-1 mat-elevation-z8" mat-raised-button color="primary"> Criar </button>
+        <button (click)="create()" class="bt-1 mat-elevation-z8" mat-raised-button color="primary"> Criar </button>
         <button class="bt-2 mat-elevation-z8" mat-raised-button color="warn"> Cancelar </button>
     </div>
 

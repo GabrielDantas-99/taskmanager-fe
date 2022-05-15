@@ -21,6 +21,8 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { ResponsavelCreateComponent } from './components/views/responsavel/responsavel-create/responsavel-create.component';
 import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -50,7 +52,8 @@ import { ResponsavelReadComponent } from './components/views/responsavel/respons
     MatButtonModule,
     FormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
