@@ -15,6 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './components/views/home/home.component';
 import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
 import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -36,7 +37,8 @@ import {MatTableModule} from '@angular/material/table';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

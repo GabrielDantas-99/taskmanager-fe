@@ -6,30 +6,30 @@
 
     <div class="mat-elevation-z8 content-table">
 
-        <table class="table" mat-table>
+        <table class="table" mat-table [dataSource]="responsaveis">
       
-            <!-- Position Column -->
+            <!-- Coluna Id -->
             <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef> ID </th>
               <td mat-cell *matCellDef="let row"> {{ row.id }} </td>
             </ng-container>
           
-            <!-- Name Column -->
+            <!-- Coluna Nome -->
             <ng-container matColumnDef="nome">
               <th mat-header-cell *matHeaderCellDef> Nome </th>
               <td mat-cell *matCellDef="let row"> {{ row.nome }} </td>
             </ng-container>
           
-            <!-- Weight Column -->
+            <!-- Coluna Descrição -->
             <ng-container matColumnDef="descricao">
               <th mat-header-cell *matHeaderCellDef> Descrição </th>
               <td mat-cell *matCellDef="let row"> {{ row.descricao }} </td>
             </ng-container>
           
-            <!-- Symbol Column -->
+            <!-- Coluna de Ações -->
             <ng-container matColumnDef="acoes">
               <th mat-header-cell *matHeaderCellDef> Ações </th>
-              <td mat-cell *matCellDef="let row"> {{ row.acoes }} </td>
+              <td mat-cell *matCellDef="let row">  </td>
             </ng-container>
           
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
