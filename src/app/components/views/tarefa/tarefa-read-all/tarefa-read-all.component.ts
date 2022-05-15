@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Tarefa } from '../tarefa.model';
 import { TarefaService } from '../tarefa.service';
 
@@ -16,7 +16,11 @@ export class TarefaReadAllComponent implements OnInit {
 
   tarefas: Tarefa[] = [];
 
-  constructor(private service: TarefaService, private route: ActivatedRoute) { }
+  constructor(
+    private service: TarefaService, 
+    private route: ActivatedRoute,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.id_resp = this.route.snapshot.paramMap.get('id_resp')!;
@@ -28,5 +32,9 @@ export class TarefaReadAllComponent implements OnInit {
       this.tarefas = resposta;
       console.log(this.tarefas)
     });
+  }
+
+  navegarParaCriarTarefa(): void {
+    this.router.navigate([`responsaveis/${this.id_resp}/tarefas/create`])
   }
 }
