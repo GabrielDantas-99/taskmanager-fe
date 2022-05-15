@@ -1,0 +1,50 @@
+.content {
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h1 {
+    font-size: 2rem;
+    color: rgb(228, 228, 228);
+    font-weight: 500;
+}
+
+button {
+    margin-bottom: .8rem;
+}
+
+button .material-icons {
+    margin-right: 0.5rem;
+}
+
+.table {
+    width: 100%;
+}
+
+.tarefas .material-icons {
+    margin-left: .8rem;
+    color: #2fcff7;
+    font-weight: 800!important;
+}
+
+.edit {
+    color: #dae63e;;
+}
+
+.delete {
+    color: #ff5b98;
+    margin-left: .5rem;
+}
+
+.icon {
+    margin-right: .8rem;
+}
+
+.mat-header {
+    width: 5rem;
+}
