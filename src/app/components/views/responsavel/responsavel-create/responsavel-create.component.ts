@@ -31,4 +31,8 @@ export class ResponsavelCreateComponent implements OnInit {
     })
   }
 
+  cancel(): void {
+    this.router.navigate(['responsaveis']);
+  }
+
 }
