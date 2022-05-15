@@ -11,27 +11,27 @@
     <table class="table" mat-table [dataSource]="responsaveis">
       <!-- Coluna Id -->
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <th mat-header-cell *matHeaderCellDef> ID </th>
         <td mat-cell *matCellDef="let row">{{ row.id }}</td>
       </ng-container>
 
       <!-- Coluna Nome -->
       <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
         <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
       </ng-container>
 
       <!-- Coluna Descrição -->
       <ng-container matColumnDef="descricao">
-        <th mat-header-cell *matHeaderCellDef>Descrição</th>
+        <th mat-header-cell *matHeaderCellDef> Descrição </th>
         <td mat-cell *matCellDef="let row">{{ row.descricao }}</td>
       </ng-container>
 
       <ng-container matColumnDef="tarefas">
-        <th mat-header-cell *matHeaderCellDef>Tarefas</th>
+        <th mat-header-cell *matHeaderCellDef> Tarefas </th>
         <td mat-cell *matCellDef="let row">
           <a class="tarefas" href="#">
-            <i class="material-icons">checklist_rtl</i>
+            <i class="material-icons"> checklist_rtl </i>
           </a>
         </td>
       </ng-container>
@@ -40,11 +40,11 @@
       <ng-container matColumnDef="acoes">
         <th class="mat-header" mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let row">
-          <a class="edit" href="#">
-            <i class="material-icons">edit</i>
+          <a class="edit" routerLink="update/{{ row.id }}">
+            <i class="material-icons"> edit </i>
           </a>
           <a class="delete" routerLink="delete/{{ row.id }}">
-            <i class="icon material-icons">delete</i>
+            <i class="icon material-icons"> delete </i>
           </a>
         </td>
       </ng-container>

@@ -35,6 +35,11 @@ export class ResponsavelService {
     return this.http.delete<void>(url)
   }
 
+  update(responsavel: Responsavel): Observable<void> {
+    const url = `${this.baseUrl}/responsaveis/${responsavel.id}`
+    return this.http.put<void>(url, responsavel)
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {
       horizontalPosition: 'center',

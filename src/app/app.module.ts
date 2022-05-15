@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,14 +21,9 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { ResponsavelCreateComponent } from './components/views/responsavel/responsavel-create/responsavel-create.component';
-import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ResponsavelDeleteComponent } from './components/views/responsavel/responsavel-delete/responsavel-delete.component';
-
-
-
-
-
+import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
+import { ResponsavelUpdateComponent } from './components/views/responsavel/responsavel-update/responsavel-update.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +34,8 @@ import { ResponsavelDeleteComponent } from './components/views/responsavel/respo
     HomeComponent,
     ResponsavelReadComponent,
     ResponsavelCreateComponent,
-    ResponsavelDeleteComponent
+    ResponsavelDeleteComponent,
+    ResponsavelUpdateComponent
   ],
   imports: [
     BrowserModule,
