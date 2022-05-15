@@ -1,8 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
@@ -16,7 +19,9 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { ResponsavelCreateComponent } from './components/views/responsavel/responsavel-create/responsavel-create.component';
 import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
+
 
 
 
@@ -28,7 +33,8 @@ import { ResponsavelReadComponent } from './components/views/responsavel/respons
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ResponsavelReadComponent
+    ResponsavelReadComponent,
+    ResponsavelCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,10 @@ import { ResponsavelReadComponent } from './components/views/responsavel/respons
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

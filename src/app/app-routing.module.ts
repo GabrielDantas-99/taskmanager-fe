@@ -1,3 +1,4 @@
+import { ResponsavelCreateComponent } from './components/views/responsavel/responsavel-create/responsavel-create.component';
 import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'responsaveis',
     component: ResponsavelReadComponent
+  },
+  {
+    path: 'responsaveis/create',
+    component: ResponsavelCreateComponent
   }
 ];
 

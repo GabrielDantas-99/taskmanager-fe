@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  // verificar import
 import { Responsavel } from '../responsavel.model';
-import { ResponsavelService } from '../responsavel.service'; // verificar import
+import { ResponsavelService } from '../responsavel.service'; 
 
 @Component({
   selector: 'app-responsavel-read',
@@ -13,7 +14,7 @@ export class ResponsavelReadComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'nome', 'descricao', 'tarefas', 'acoes'];
 
-  constructor(private service: ResponsavelService) { }
+  constructor(private service: ResponsavelService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();   // Chama o método sempre que a página é carregada
@@ -24,6 +25,10 @@ export class ResponsavelReadComponent implements OnInit {
       console.log(resposta);
       this.responsaveis = resposta;
     })
+  }
+
+  navegarParaResponsavelCreate() {
+    this.router.navigate(["responsaveis/create"]);
   }
 
 }
