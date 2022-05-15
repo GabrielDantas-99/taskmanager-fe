@@ -22,6 +22,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import { ResponsavelCreateComponent } from './components/views/responsavel/responsavel-create/responsavel-create.component';
 import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ResponsavelDeleteComponent } from './components/views/responsavel/responsavel-delete/responsavel-delete.component';
 
 
 
@@ -36,7 +37,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     NavComponent,
     HomeComponent,
     ResponsavelReadComponent,
-    ResponsavelCreateComponent
+    ResponsavelCreateComponent,
+    ResponsavelDeleteComponent
   ],
   imports: [
     BrowserModule,

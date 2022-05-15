@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Responsavel } from './responsavel.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,9 +20,19 @@ export class ResponsavelService {
     return this.http.get<Responsavel[]>(url)
   }
 
+  findById(id: String): Observable<Responsavel> {
+    const url = `${this.baseUrl}/responsaveis/${id}`;
+    return this.http.get<Responsavel>(url)
+  }
+
   create(responsavel: Responsavel): Observable<Responsavel> {
     const url = `${this.baseUrl}/responsaveis`
     return this.http.post<Responsavel>(url, responsavel);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/responsaveis/${id}`
+    return this.http.delete<void>(url)
   }
 
   mensagem(str: String): void {
