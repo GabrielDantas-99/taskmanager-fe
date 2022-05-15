@@ -29,19 +29,19 @@ export class ResponsavelUpdateComponent implements OnInit {
   }
 
   findById(): void {
-    this.service.findById(this.responsavel.id!).subscribe((resposta => {
-      this.responsavel.nome = resposta.nome;
-      this.responsavel.descricao = resposta.descricao;
-    }))
+    this.service.findById(this.responsavel.id!).subscribe((resposta) => {
+      this.responsavel.nome = resposta.nome
+      this.responsavel.descricao = resposta.descricao
+    })
   }
 
   update(): void {
     this.service.update(this.responsavel).subscribe((resposta) => {
-      this.router.navigate(['responsaveis']);
-      this.service.mensagem('Responsável atualizado com sucesso!');
+      this.router.navigate(['responsaveis'])
+      this.service.mensagem('Responsavel atualizado com sucesso!')
     }, err => {
-      console.log(err);
-    });
+      this.service.mensagem('Validar se todos os campos estão preenchidos corretamente!')
+    })
   }
 
   cancel(): void {

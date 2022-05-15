@@ -27,14 +27,13 @@ export class ResponsavelDeleteComponent implements OnInit {
     this.service.findById(this.responsavel.id!).subscribe((resposta) => {
       this.responsavel.nome = resposta.nome;
       this.responsavel.descricao = resposta.descricao;
-      console.log(resposta)
     })
   }
 
   delete(): void {
     this.service.delete(this.responsavel.id!).subscribe((resposta) => {
       this.router.navigate(['responsaveis'])
-      this.service.mensagem("Resposavel deletado com sucesso!")
+      this.service.mensagem('Resposavel deletado com sucesso!')
     }, err => {
       this.service.mensagem(err.error.error)
     })

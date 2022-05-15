@@ -21,7 +21,7 @@ export class ResponsavelService {
   }
 
   findById(id: String): Observable<Responsavel> {
-    const url = `${this.baseUrl}/responsaveis/${id}`;
+    const url = `${this.baseUrl}/responsaveis/${id}`
     return this.http.get<Responsavel>(url)
   }
 
