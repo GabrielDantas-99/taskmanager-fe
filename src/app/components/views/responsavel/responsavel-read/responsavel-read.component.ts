@@ -11,7 +11,7 @@ export class ResponsavelReadComponent implements OnInit {
 
   responsaveis: Responsavel[] = [];
 
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'tarefas', 'acoes'];
 
   constructor(private service: ResponsavelService) { }
 
