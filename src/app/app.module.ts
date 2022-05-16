@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,6 +26,7 @@ import { ResponsavelReadComponent } from './components/views/responsavel/respons
 import { ResponsavelUpdateComponent } from './components/views/responsavel/responsavel-update/responsavel-update.component';
 import { TarefaReadAllComponent } from './components/views/tarefa/tarefa-read-all/tarefa-read-all.component';
 import { TarefaCreateComponent } from './components/views/tarefa/tarefa-create/tarefa-create.component';
+import { TarefaUpdateComponent } from './components/views/tarefa/tarefa-update/tarefa-update.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TarefaCreateComponent } from './components/views/tarefa/tarefa-create/t
     ResponsavelDeleteComponent,
     ResponsavelUpdateComponent,
     TarefaReadAllComponent,
-    TarefaCreateComponent
+    TarefaCreateComponent,
+    TarefaUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import { TarefaCreateComponent } from './components/views/tarefa/tarefa-create/t
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

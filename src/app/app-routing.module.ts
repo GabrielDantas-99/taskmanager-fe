@@ -8,6 +8,7 @@ import { ResponsavelReadComponent } from './components/views/responsavel/respons
 import { ResponsavelUpdateComponent } from './components/views/responsavel/responsavel-update/responsavel-update.component';
 import { TarefaCreateComponent } from './components/views/tarefa/tarefa-create/tarefa-create.component';
 import { TarefaReadAllComponent } from './components/views/tarefa/tarefa-read-all/tarefa-read-all.component';
+import { TarefaUpdateComponent } from './components/views/tarefa/tarefa-update/tarefa-update.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'responsaveis/:id_resp/tarefas/create',
     component: TarefaCreateComponent
+  },
+  {
+    path: 'responsaveis/:id_resp/tarefas/:id/update',
+    component: TarefaUpdateComponent
   }
 ];
 

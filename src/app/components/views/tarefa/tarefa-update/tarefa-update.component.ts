@@ -5,11 +5,11 @@ import { Tarefa } from '../tarefa.model';
 import { TarefaService } from '../tarefa.service';
 
 @Component({
-  selector: 'app-tarefa-create',
-  templateUrl: './tarefa-create.component.html',
-  styleUrls: ['./tarefa-create.component.css']
+  selector: 'app-tarefa-update',
+  templateUrl: './tarefa-update.component.html',
+  styleUrls: ['./tarefa-update.component.css']
 })
-export class TarefaCreateComponent implements OnInit {
+export class TarefaUpdateComponent implements OnInit {
 
   id_resp: String =''
 
@@ -32,16 +32,24 @@ export class TarefaCreateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id_resp = this.route.snapshot.paramMap.get('id_resp')!
+    this.id_resp = this.route.snapshot.paramMap.get('id_resp')!;
+    this.tarefa.id = this.route.snapshot.paramMap.get('id')!;
+    this.findById()
   }
 
-  create(): void {
-    this.service.create(this.tarefa, this.id_resp).subscribe((resposta) => {
+  findById(): void {
+    this.service.findById(this.tarefa.id!).subscribe((resposta) => {
+      this.tarefa = resposta
+    })
+  }
+
+  update(): void {
+    this.service.update(this.tarefa).subscribe((resposta) => {
       this.router.navigate([`responsaveis/${this.id_resp}/tarefas`]);
-      this.service.mensagem("Tarefa criada com sucesso!");
+      this.service.mensagem("Tarefa atualizada com sucesso!")
     }, err => {
       this.router.navigate([`responsaveis/${this.id_resp}/tarefas`]);
-      this.service.mensagem("Erro ao criar nova tarefa! Tente novamente mais tarde!");
+      this.service.mensagem("Falha ao atualizar tarefa! Tente novamente mais tarde!")
     })
   }
 
