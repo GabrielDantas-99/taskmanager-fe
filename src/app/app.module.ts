@@ -27,6 +27,8 @@ import { ResponsavelUpdateComponent } from './components/views/responsavel/respo
 import { TarefaReadAllComponent } from './components/views/tarefa/tarefa-read-all/tarefa-read-all.component';
 import { TarefaCreateComponent } from './components/views/tarefa/tarefa-create/tarefa-create.component';
 import { TarefaUpdateComponent } from './components/views/tarefa/tarefa-update/tarefa-update.component';
+import { TarefaDeleteComponent } from './components/views/tarefa/tarefa-delete/tarefa-delete.component';
+import { TarefaReadComponent } from './components/views/tarefa/tarefa-read/tarefa-read.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { TarefaUpdateComponent } from './components/views/tarefa/tarefa-update/t
     ResponsavelUpdateComponent,
     TarefaReadAllComponent,
     TarefaCreateComponent,
-    TarefaUpdateComponent
+    TarefaUpdateComponent,
+    TarefaDeleteComponent,
+    TarefaReadComponent
   ],
   imports: [
     BrowserModule,

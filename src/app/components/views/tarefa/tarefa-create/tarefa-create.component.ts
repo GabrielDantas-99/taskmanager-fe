@@ -17,12 +17,13 @@ export class TarefaCreateComponent implements OnInit {
     id: '',
     titulo: '',
     descricao: '',
-    responsavel: '',
+    prioridade: '',
     deadline: '',
   }
 
   titulo = new FormControl('', [Validators.minLength(3)])
   descricao = new FormControl('', [Validators.minLength(8)])
+  prioridade = new FormControl('', [Validators.minLength(8)])
   deadline = new FormControl('', [Validators.minLength(10)])
 
   constructor(
@@ -51,13 +52,16 @@ export class TarefaCreateComponent implements OnInit {
 
   getMessage() {
     if(this.titulo.invalid) {
-      return 'O campo Título deve conter entre 3 e 50 caracteres'
+      return 'O campo Título deve conter entre 3 e 50 caracteres!'
     }
     if(this.descricao.invalid) {
-      return 'O campo Descrição deve conter entre 3 e 500 caracteres'
+      return 'O campo Descrição deve conter entre 3 e 500 caracteres!'
+    }
+    if(this.prioridade.invalid) {
+      return 'O campo Prioridade deve ser selecionado!'
     }
     if(this.deadline.invalid) {
-      return 'O campo Título deve conter entre 3 e 20 caracteres'
+      return 'O campo Título deve conter entre 3 e 20 caracteres!'
     }
     return false;
   }

@@ -34,6 +34,11 @@ export class TarefaService {
     return this.http.post<Tarefa>(url, tarefa)
   }
 
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/tarefas/${id}`
+    return this.http.delete<void>(url)
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'OK', {
       horizontalPosition: 'center',

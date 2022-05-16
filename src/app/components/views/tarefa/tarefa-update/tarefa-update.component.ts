@@ -17,12 +17,13 @@ export class TarefaUpdateComponent implements OnInit {
     id: '',
     titulo: '',
     descricao: '',
-    responsavel: '',
+    prioridade: '',
     deadline: '',
   }
 
   titulo = new FormControl('', [Validators.minLength(3)])
   descricao = new FormControl('', [Validators.minLength(8)])
+  prioridade = new FormControl('', [Validators.minLength(3)])
   deadline = new FormControl('', [Validators.minLength(10)])
 
   constructor(
@@ -35,6 +36,10 @@ export class TarefaUpdateComponent implements OnInit {
     this.id_resp = this.route.snapshot.paramMap.get('id_resp')!;
     this.tarefa.id = this.route.snapshot.paramMap.get('id')!;
     this.findById()
+  }
+
+  cancel(): void {
+    this.router.navigate([`responsaveis/${this.id_resp}/tarefas`]);
   }
 
   findById(): void {
@@ -51,10 +56,6 @@ export class TarefaUpdateComponent implements OnInit {
       this.router.navigate([`responsaveis/${this.id_resp}/tarefas`]);
       this.service.mensagem("Falha ao atualizar tarefa! Tente novamente mais tarde!")
     })
-  }
-
-  cancel(): void {
-    this.router.navigate([`responsaveis/${this.id_resp}/tarefas`]);
   }
 
   getMessage() {

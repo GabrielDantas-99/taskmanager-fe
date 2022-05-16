@@ -7,7 +7,9 @@ import { ResponsavelDeleteComponent } from './components/views/responsavel/respo
 import { ResponsavelReadComponent } from './components/views/responsavel/responsavel-read/responsavel-read.component';
 import { ResponsavelUpdateComponent } from './components/views/responsavel/responsavel-update/responsavel-update.component';
 import { TarefaCreateComponent } from './components/views/tarefa/tarefa-create/tarefa-create.component';
+import { TarefaDeleteComponent } from './components/views/tarefa/tarefa-delete/tarefa-delete.component';
 import { TarefaReadAllComponent } from './components/views/tarefa/tarefa-read-all/tarefa-read-all.component';
+import { TarefaReadComponent } from './components/views/tarefa/tarefa-read/tarefa-read.component';
 import { TarefaUpdateComponent } from './components/views/tarefa/tarefa-update/tarefa-update.component';
 
 const routes: Routes = [
@@ -42,6 +44,14 @@ const routes: Routes = [
   {
     path: 'responsaveis/:id_resp/tarefas/:id/update',
     component: TarefaUpdateComponent
+  },
+  {
+    path: 'responsaveis/:id_resp/tarefas/:id/delete',
+    component: TarefaDeleteComponent
+  },
+  {
+    path: 'responsaveis/:id_resp/tarefas/:id/read',
+    component: TarefaReadComponent
   }
 ];
 

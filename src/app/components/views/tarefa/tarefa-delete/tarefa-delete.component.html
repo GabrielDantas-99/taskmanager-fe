@@ -1,0 +1,29 @@
+<form>
+    <h1>Deletando Tarefa</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Título</mat-label>
+        <input matInput [(ngModel)]="tarefa.titulo" type="text" name="titulo" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <input matInput [(ngModel)]="tarefa.descricao" type="text" name="descricao" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Prioridade</mat-label>
+        <input matInput [(ngModel)]="tarefa.prioridade" type="text" name="descricao" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>DeadLine</mat-label>
+        <input matInput [(ngModel)]="tarefa.deadline" type="text" name="deadline" disabled>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="delete()" class="bt-1 mat-elevation-z8" mat-raised-button color="primary"> Deletar </button>
+        <button (click)="cancel()" class="bt-2 mat-elevation-z8" mat-raised-button color="warn"> Cancelar </button>
+    </div>
+
+</form>

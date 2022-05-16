@@ -41,6 +41,11 @@ button .material-icons {
     margin-left: .5rem;
 }
 
+.read {
+    color: #2fcff7;
+    margin-left: 1rem;
+}
+
 .icon {
     margin-right: .8rem;
 }

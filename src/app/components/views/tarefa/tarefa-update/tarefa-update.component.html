@@ -8,15 +8,21 @@
     </mat-form-field>
 
     <mat-form-field class="form">
-        <mat-label>DeadLine</mat-label>
-        <input matInput [(ngModel)]="tarefa.deadline" [formControl]="deadline" required type="text" name="deadline" placeholder="Ex. 22/05/2022" maxlength="100">
-        <mat-error *ngIf="deadline.invalid"> {{ getMessage() }} </mat-error>
-    </mat-form-field>
-
-    <mat-form-field class="form">
         <mat-label>Descrição</mat-label>
         <input matInput [(ngModel)]="tarefa.descricao" [formControl]="descricao" required type="text" name="descricao" placeholder="Ex. A atividade consciste em..." maxlength="500">
         <mat-error *ngIf="descricao.invalid"> {{ getMessage() }} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Prioridade</mat-label>
+        <input matInput [(ngModel)]="tarefa.prioridade" [formControl]="prioridade" required type="text" name="deadline" placeholder="Ex. 22/05/2022" maxlength="100">
+        <mat-error *ngIf="prioridade.valid"> {{ getMessage() }} </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>DeadLine</mat-label>
+        <input matInput [(ngModel)]="tarefa.deadline" [formControl]="deadline" required type="text" name="deadline" placeholder="Ex. 22/05/2022" maxlength="100">
+        <mat-error *ngIf="deadline.invalid"> {{ getMessage() }} </mat-error>
     </mat-form-field>
 
     <div class="buttons">

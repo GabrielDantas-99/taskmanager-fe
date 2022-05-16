@@ -2,6 +2,6 @@ export interface Tarefa {
     id?: String,
     titulo: String,
     descricao: String,
-    responsavel: String,
+    prioridade: String,
     deadline: String
 }

@@ -10,7 +10,7 @@ import { TarefaService } from '../tarefa.service';
 })
 export class TarefaReadAllComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'titulo', 'tarefas', 'acoes'];
+  displayedColumns: string[] = ['id', 'titulo', 'descricao', 'acoes'];
 
   id_resp: String = '';
 
